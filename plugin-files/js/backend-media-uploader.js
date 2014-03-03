@@ -3,8 +3,8 @@ function backend_media_uploader(e){
       button = jQuery(e);
 
   wp.media.editor.send.attachment = function(props, attachment){
-    jQuery(e).siblings('.media').val(attachment.id);
-    jQuery(e).siblings('.preview').attr('src', attachment.url);
+    jQuery(e).siblings('.bmu-media').val(attachment.id);
+    jQuery(e).siblings('.bmu-preview').attr('src', attachment.url);
     wp.media.editor.send.attachment = send_attachment_bkp;
   }
 
