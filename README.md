@@ -28,4 +28,4 @@ The third value, **$button\_name**, is optional. This value will be used to supp
 
 This plugin will send the media attachment ID to your meta value, **not the image url**. The simpliest way to use this attachment ID is like so:
 
-wp\_get\_attachment\_image( $attachment\_id, $size); // $attchment_id is your meta value
+echo wp\_get\_attachment\_image( $attachment\_id, $size); // $attchment_id is your meta value
