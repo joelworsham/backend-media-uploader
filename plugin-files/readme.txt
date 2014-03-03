@@ -4,7 +4,7 @@ Requires at least: 3.5
 Tested up to: 3.8.1
 License: GPLv2 or later
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+The function will place a media upload button that allows users to either upload new content or use existing content via the media library.
 
 == Description ==
 
