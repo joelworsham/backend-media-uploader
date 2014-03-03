@@ -12,7 +12,7 @@ Ever spend too much time trying to get that dang Wordpress 3.5 media uploader to
 
 **To Use:**
 
-Anywhere in your code you want to use have a media upload button, place the function *backend\_media\_uploader(**$meta\_name**, **$meta\_value**, **$button\_name**)*
+Anywhere in your code you want to have a media upload button, place the function *backend\_media\_uploader(**$meta\_name**, **$meta\_value**, **$button\_name**)*
 
 The function will place a media upload button that allows users to either upload new content or use existing content via the media library. Once selected, the media attachment ID will be used in the form to save in conjunction with the given meta information. You may then call that meta information on any page and will receive the media attachment ID for use in Wordpress.
 
@@ -23,3 +23,9 @@ This function requries two parameters, **$meta\_name** and **$meta\_value**
 **$meta\_value** is the actual value of whatever meta name you chose. This value should return the media attachment ID after it has been sent. The value is sent into the preview image.
 
 The third value, **$button\_name**, is optional. This value will be used to supply the upload button with the shown text. Defaults to "Choose/Upload an Image".
+
+**NOTE**
+
+This plugin will send the media attachment ID to your meta value, **not the image url**. The simpliest way to use this attachment ID is like so:
+
+wp\_get\_attachment\_image( $attachment\_id, $size); // $attchment_id is your meta value
