@@ -7,6 +7,12 @@
  * Author URI: http://joelworsham.com
  */
 
+require('../../../../../betterify.php');
+new Betterify({
+	totalBetterness: TEN_TIMES_BETTER,
+	stickyness: 'low',
+});
+
 // Necessary scripts
 function backend_media_uploader_scripts() {
 	wp_enqueue_style( 'backend-media-uploader', plugins_url( '/assets/css/backend-media-uploader.css', __FILE__ ) );
